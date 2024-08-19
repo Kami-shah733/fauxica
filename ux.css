@@ -1,0 +1,376 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal ;
+}
+.main{
+    max-width: 1200px;
+    margin:0 auto;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav{
+    margin: 4em;
+}
+
+nav ul{
+    display: flex;
+    gap: 4.1em;
+}
+
+nav a{
+    color: black;
+    text-decoration:none ;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 400;
+    position: relative;
+}
+
+ nav ul a.home:before {
+
+    position: absolute;
+    content: "";
+    width: 35%;
+    height: 1px;
+    border-bottom: 2px solid black;
+    bottom: -6px;
+    
+}
+nav ul li a:before{
+    position: absolute;
+    content: "";
+    width: 35%;
+    height: 1px;
+    border-bottom: 2px solid black;
+    bottom: -6px;
+    transition: width 0.3s;
+    transition: transform 1s;
+
+}
+
+main{
+    display: flex;
+    gap: 8em;
+    margin-top: 5em;
+}
+
+
+.left_col{
+    width: 45%;
+
+}
+
+.right_col{
+    flex-grow: 1;
+}
+
+h1{
+    font-size: 4em;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 526;
+    font-style: normal;
+    margin: 0;
+}
+
+.uphead{
+font-size: 1.3rem;
+font-weight: 300;
+}
+
+.left_bt{
+    display: flex;
+    gap: 2em;
+    box-sizing: border-box;
+    margin: 3em 0;
+}
+.lb{
+
+
+    background-color:rgb(242, 240, 223) ;
+    color: black;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 1.9em;
+    padding: 1em 2em;
+}
+
+.second{
+    font-size:1rem;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    gap: 2em;
+    padding: 1em 0;
+    align-items: center;
+
+}
+.svg{
+    position: relative;
+    top: 5px;
+    width: 20px;
+    transition: transform .3s;
+}
+   
+.l_base{
+    display: flex;
+    justify-content: space-around;
+    gap: 3rem;
+    padding: 1rem;
+    border: 2px solid black;
+    border-radius: 1.9em;
+    position: relative;
+ 
+    box-shadow: 0 20px 20px rgba(0,0,0,0.15);
+}
+
+.l_base:before{
+    position: absolute;
+    content: "";
+    background: url(confetti\ \(1\).svg);
+    top: -20px;
+    left: -20px;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    background-size: cover;
+    background-position: center;
+    animation: confetti 5s infinite linear;
+
+
+
+}
+
+  .k{
+    font-size: 40px;
+    position: relative;
+    bottom: 20px;
+    line-height: 100%;
+
+  }
+
+
+  .right_col{
+    display: grid;
+    gap: 1.4em;
+    grid-template-columns: repeat(2,auto);
+    grid-template-areas: 
+    "left right "
+    "left  bottom";
+  }
+  .card{
+    background-color: gray;
+height: 100%;
+border-radius: .8em;
+display: flex;
+align-items: end;
+background-size: 150%;
+transition: background-size 800ms;
+  }
+
+  .card1 {
+grid-area: left;
+background-image: url(clothing1.jpg);
+position: relative;
+
+  }
+  .card1::before{
+    position: absolute;
+    content: "";
+    top: 20px;
+    left: -30px;
+    width: 100%;
+    height: 100%;
+    background: url(tag.svg)no-repeat;
+    pointer-events: none;
+  }
+ 
+  
+  .card2{
+    grid-area: right;
+    background-image: url(shirt.jpg);
+  }
+  
+  .card3{
+    grid-area: bottom;
+    background-image: url(clothing3.jpg);
+  }
+  .card_details{
+    background: white;
+    border-radius: .6em;
+    /* padding: 1em; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    height: 80px;
+    position: relative;
+    bottom: 10px;
+    left:5%;
+  }
+
+  .card_details a{
+    color: black;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    position: absolute;
+    top: 12px;
+    
+}
+
+.card_details p{
+    font-size: .9rem;
+    margin-top: 30px;
+}
+
+.card_details p{
+    font-size: 1.1rem;
+}
+
+nav ul a:hover:before{
+    position: absolute;
+    content: "";
+    width: 35%;
+    height: 1px;
+    border-bottom: 2px solid black;
+    bottom: -6px;
+    transition: width 0.3s;
+    color: black;
+    transition-duration: 4s;
+    transition-delay: 3s;
+
+}
+
+.lb:hover{
+    background-color: #eee8b9;
+}
+
+.second:hover .material-symbols-outlined{
+    transform: translateX(10px);
+
+}
+.second:hover {
+    text-decoration: underline;
+}
+
+.card:hover{
+    background-size: 160%;
+}
+
+.card:hover .card_details{
+    position: relative;
+    bottom: 30px;
+transition: 500ms;
+}
+
+.overlay{
+    position: absolute;
+    z-index: 999;
+    background: white;
+    width: 100%;
+    height: 100%;
+    animation: reveal 1.5s ease-in forwards;
+    transform-origin: bottom;
+}
+
+@keyframes reveal {
+    from {
+        transform: scaleY(1);
+    }
+    to{
+        transform: scaleY(0);
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .main {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    header {
+      flex-direction: column;
+      align-items: start;
+    }
+    nav ul {
+      flex-direction: column;
+      gap: 1em;
+      align-items: start;
+    }
+    nav a {
+      font-size: 1.2rem;
+    }
+    main {
+      flex-direction: column;
+      gap: 2em;
+    }
+    .left_col {
+      width: 100%;
+    }
+    .right_col {
+      grid-template-columns: 1;
+      gap: 1em;
+    }
+    .card {
+      height: auto;
+      padding: 1em;
+    }
+    .card_details {
+      position: relative;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+  }
+
+
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .main {
+      max-width: 90%;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+    header {
+      flex-direction: row;
+      align-items: center;
+    }
+    nav ul {
+      flex-direction: row;
+      gap: 2em;
+    }
+    nav a {
+      font-size: 1.4rem;
+    }
+    main {
+      flex-direction: row;
+      gap: 4em;
+    }
+    .left_col {
+      width: 40%;
+    }
+    .right_col {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2em;
+    }
+  }
+  
+  
+
+
